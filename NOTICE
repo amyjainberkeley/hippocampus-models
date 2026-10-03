@@ -1,0 +1,23 @@
+Snowflake Arctic Embed S
+Copyright (c) Snowflake Inc.
+Licensed under the Apache License, Version 2.0. See LICENSE-Arctic-Embed-S.txt.
+
+Upstream model: https://huggingface.co/Snowflake/snowflake-arctic-embed-s
+Pinned upstream revision: e596f507467533e48a2e17c007f0e1dacc837b33
+License declaration at that revision:
+https://huggingface.co/Snowflake/snowflake-arctic-embed-s/tree/e596f507467533e48a2e17c007f0e1dacc837b33
+
+Modified distribution: Hippocampus's ArcticEmbedS_FP16.mlmodelc is a Core ML
+FP16 conversion of the upstream model, not its original safetensors file.
+The graph uses eager attention, a finite -10000 attention-mask floor, fixed
+1x128 integer inputs, and a 1x384 float32 CLS-pooled, L2-normalized output.
+It targets Core ML specification version 8 / macOS 14 or later. The compiled
+graph, compiled metadata and FP16 weights are converted files;
+hippocampus-model.json is added compatibility/provenance metadata.
+
+Conversion source:
+https://github.com/amyjainberkeley/hippocampus/blob/ba1c4918658926c3683d865a961bdd62f1b73591/scripts/convert_embedder.py
+
+This archive contains the required retrieval model and its attribution only.
+It contains no personal memory, app executable, API credentials, Qwen or NER model.
+The upstream project does not endorse this derivative or Hippocampus.
